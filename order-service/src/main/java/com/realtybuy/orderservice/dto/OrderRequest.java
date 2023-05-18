@@ -1,6 +1,5 @@
 package com.realtybuy.orderservice.dto;
 
-import com.realtybuy.orderservice.model.OrderLineItems;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
