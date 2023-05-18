@@ -1,0 +1,30 @@
+package com.realtybuy.propertyservice.controller;
+
+import com.realtybuy.propertyservice.dto.PropertyRequest;
+import com.realtybuy.propertyservice.dto.PropertyResponse;
+import com.realtybuy.propertyservice.service.PropertyService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/property")
+@RequiredArgsConstructor
+public class PropertyController {
+
+    private final PropertyService propertyService;
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public void createProperty(@RequestBody PropertyRequest propertyRequest){
+        propertyService.createProperty(propertyRequest);
+    }
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List<PropertyResponse> getAllProperties(){
+        return propertyService.getAllProperties();
+    }
+}
