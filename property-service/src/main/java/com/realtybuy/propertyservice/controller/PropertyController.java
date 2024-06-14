@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/property")
 @RequiredArgsConstructor
+@CrossOrigin
 public class PropertyController {
 
     private final PropertyService propertyService;
