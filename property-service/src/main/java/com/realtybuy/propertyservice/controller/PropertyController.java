@@ -28,4 +28,10 @@ public class PropertyController {
     public List<PropertyResponse> getAllProperties(){
         return propertyService.getAllProperties();
     }
+
+    @GetMapping("{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public PropertyResponse getProperty(@PathVariable String id){
+        return propertyService.getProperty(id);
+    }
 }

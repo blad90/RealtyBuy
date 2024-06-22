@@ -35,6 +35,15 @@ public class PropertyService {
         return properties.stream().map(this::mapToPropertyResponse).collect(Collectors.toList());
     }
 
+    public PropertyResponse getProperty(String id){
+        Property property = propertyRepository
+                .findById(id)
+                .orElseThrow(() -> new RuntimeException("Property id: " + id +" not found!"));
+
+        return mapToPropertyResponse(property);
+
+    }
+
     private PropertyResponse mapToPropertyResponse(Property property){
         return PropertyResponse.builder()
                 .id(property.getId())
