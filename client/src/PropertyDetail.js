@@ -1,7 +1,7 @@
 import React from "react";
 import axios from 'axios';
 
-export default class Property extends React.Component {
+export default class PropertyDetail extends React.Component {
 
 
     render(){

@@ -1,4 +1,4 @@
-import Property from './Property';
+import PropertyList from './PropertyList';
 import PropertyDetail from './PropertyDetail';
 import Header from "./ui/Header";
 import React from "react";
@@ -27,6 +27,8 @@ class App extends React.Component {
             })
     }
 
+
+
     handleSelectedItem = (property) => {
         this.setState({selectedProperty: property})
     }
@@ -36,7 +38,7 @@ class App extends React.Component {
 
         return (<div>
             <Header />
-            <Property properties={properties} onSelectProperty={this.handleSelectedItem}/>
+            <PropertyList properties={properties} onSelectProperty={this.handleSelectedItem}/>
             {selectedProperty && <PropertyDetail property={selectedProperty} /> }
             <Footer />
         </div>) ;
