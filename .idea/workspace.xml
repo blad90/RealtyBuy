@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3227b0b2-84ea-43db-ba0e-22fbaa6eaafb" name="Changes" comment="Added functionality to place a new order and retrieve it through the api + mysql configurations." />
+    <list default="true" id="3227b0b2-84ea-43db-ba0e-22fbaa6eaafb" name="Changes" comment="Added functionality to place a new order and retrieve it through the api + mysql configurations.">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/controller/PropertyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/controller/PropertyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/dto/PropertyRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/dto/PropertyRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/dto/PropertyResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/dto/PropertyResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/model/Property.java" beforeDir="false" afterPath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/model/Property.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/service/PropertyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/service/PropertyService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +47,10 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>

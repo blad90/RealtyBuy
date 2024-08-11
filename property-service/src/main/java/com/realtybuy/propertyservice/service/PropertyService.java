@@ -24,6 +24,7 @@ public class PropertyService {
                 .address(propertyRequest.getAddress())
                 .squareFeet(propertyRequest.getSquareFeet())
                 .price(propertyRequest.getPrice())
+                .sold(propertyRequest.isSold())
                 .build();
 
         propertyRepository.save(property);
@@ -43,6 +44,7 @@ public class PropertyService {
                 .address(property.getAddress())
                 .squareFeet(property.getSquareFeet())
                 .price(property.getPrice())
+                .sold(property.isSold())
                 .build();
     }
 }
