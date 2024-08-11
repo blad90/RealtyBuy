@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3227b0b2-84ea-43db-ba0e-22fbaa6eaafb" name="Changes" comment="Added functionality to place a new order and retrieve it through the api + mysql configurations.">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/controller/PropertyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/controller/PropertyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/dto/PropertyRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/dto/PropertyRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/dto/PropertyResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/dto/PropertyResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/model/Property.java" beforeDir="false" afterPath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/model/Property.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/service/PropertyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/property-service/src/main/java/com/realtybuy/propertyservice/service/PropertyService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/order-service" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="corretto-11" />
+  </component>
+  <component name="ProjectId" id="2PbfFznlRBI2ISb5SseBRBEGDne" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-11&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;/home/blad/.config/JetBrains/IntelliJIdea2023.1/node/node-v18.15.0-linux-x64/bin/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;681cf87c9504b3135dcfaee43a32fd5e&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.realtybuy.orderservice.dto" />
+      <recent name="com.realtybuy.orderservice.model" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.PropertyServiceApplication">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="order-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.realtybuy.orderservice.OrderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PropertyServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="property-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.realtybuy.propertyservice.PropertyServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.realtybuy.propertyservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="Spring Boot.OrderServiceApplication" />
+      <item itemvalue="Spring Boot.PropertyServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.PropertyServiceApplication" />
+        <item itemvalue="Spring Boot.PropertyServiceApplication" />
+        <item itemvalue="Spring Boot.PropertyServiceApplication" />
+        <item itemvalue="Spring Boot.PropertyServiceApplication" />
+        <item itemvalue="Spring Boot.PropertyServiceApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3227b0b2-84ea-43db-ba0e-22fbaa6eaafb" name="Changes" comment="" />
+      <created>1683730611354</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683730611354</updated>
+      <workItem from="1683730612675" duration="380000" />
+      <workItem from="1683732451517" duration="16485000" />
+      <workItem from="1684174682680" duration="3780000" />
+      <workItem from="1684239606507" duration="4291000" />
+      <workItem from="1684259970174" duration="1352000" />
+      <workItem from="1684262623574" duration="750000" />
+      <workItem from="1684343345428" duration="989000" />
+      <workItem from="1684347642941" duration="4154000" />
+      <workItem from="1684415656903" duration="11335000" />
+      <workItem from="1684429938643" duration="490000" />
+      <workItem from="1684437383672" duration="1322000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial project structure.">
+      <created>1683811797012</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683811797014</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added client module based on React with initial configurations.">
+      <created>1683819040095</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683819040095</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added functionality to the property service based on microservices architecture + minimal general configurations.">
+      <created>1684178330608</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684178330608</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Configured mongodb to allow adding and retrieving a property from the database.">
+      <created>1684419488746</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684419488746</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Configured mongodb to allow adding and retrieving a property from the database.">
+      <created>1684419519294</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684419519294</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added functionality to place a new order and retrieve it through the api + mysql configurations.">
+      <created>1684429404029</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684429404029</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial project structure." />
+    <MESSAGE value="Added client module based on React with initial configurations." />
+    <MESSAGE value="Added functionality to the property service based on microservices architecture + minimal general configurations." />
+    <MESSAGE value="Configured mongodb to allow adding and retrieving a property from the database." />
+    <MESSAGE value="Added functionality to place a new order and retrieve it through the api + mysql configurations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality to place a new order and retrieve it through the api + mysql configurations." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
