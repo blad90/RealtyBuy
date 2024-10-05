@@ -1,72 +1,42 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
+import PropertyDetail from "../PropertyDetail";
 
 class EditModal extends React.Component {
     constructor(props) {
         super(props);
+        console.log("EditModal.js : " + props)
 
         this.state = {
-            properties : []
+            propertyToEdit: this.props.editProperty
         }
     }
+    onEditProperty(){
+        this.setState(prevState => {
+            prevState.propertyToEdit = this.props;
+        });
+    }
 
-
-
-    render() {
-        const {properties, onEditProperty} = this.props;
+render() {
+        const {property, onEditProperty} = this.props;
+        // console.log("properties: "+JSON.stringify(this.props));
+    console.log('property ' + property)
+    console.log('this.props: ' + JSON.stringify(this.props));
+    console.log('this.props.editProperty: ' + JSON.stringify(this.props.editProperty));
 
         return (
-            <Modal show={this.props.show} onHide={this.props.handleClose}>
+            <Modal show={this.props.show} onHide={this.props.handleClose} >
                 <Modal.Header closeButton>
                     <Modal.Title>Property Details - Edit</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                    <form>
-                        <div className="mb-3">
-                            <label htmlFor="propertyId" className="form-label">Property ID</label>
-                            <input type="text" className="form-control" id="propertyId"
-                                   aria-describedby="propertyInfo" readOnly={true} value={this.props.editProperty.id}/>
-                            <div id="propertyInfo" className="form-text">For property identification.</div>
-                        </div>
-
-                        <div className="mb-3">
-                            <label htmlFor="propertyName" className="form-label">Name</label>
-                            <input type="text" className="form-control" id="propertyName" value={this.props.editProperty.name}/>
-                        </div>
-
-                        <div className="mb-3">
-                            <label htmlFor="propertyDescription" className="form-label">Description</label>
-                            <input type="text" className="form-control" id="propertyDescription" value={this.props.editProperty.description}/>
-                        </div>
-
-                        <div className="mb-3">
-                            <label htmlFor="propertyAddress" className="form-label">Address</label>
-                            <input  type="address" className="form-control" id="propertyAddress" value={this.props.editProperty.address}/>
-                        </div>
-
-                        <div className="mb-3">
-                            <label htmlFor="propertySq" className="form-label">Sq.</label>
-                            <input type="text" className="form-control" id="propertySq" value={this.props.editProperty.squareFeet}/>
-                        </div>
-
-                        <div className="mb-3">
-                            <label htmlFor="propertyPrice" className="form-label">Price</label>
-                            <input type="text" className="form-control" id="propertyPrice" value={this.props.editProperty.price}/>
-                        </div>
-
-                        <div className="mb-3">
-                            <label htmlFor="propertySold" className="form-label">Status</label>
-                            <input type="text" className="form-control" id="propertySold" value={this.props.editProperty.status}/>
-                        </div>
-
-                    </form>
-
+                <Modal.Body >
+                <PropertyDetail property={this.props.editProperty} />
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={this.props.handleClose}>
                         Cerrar
                     </Button>
-                    <Button variant="primary" onClick={this.props.handleClose}>
+                    <Button variant="primary" onClick={()=> this.props.handleEditItem(property)}>
                         Guardar Cambios
                     </Button>
                 </Modal.Footer>

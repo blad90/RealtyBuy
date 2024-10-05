@@ -39,7 +39,6 @@ class App extends React.Component {
         return (<div>
             <Header />
             <PropertyList properties={properties} onSelectProperty={this.handleSelectedItem}/>
-            {selectedProperty && <PropertyDetail property={selectedProperty} /> }
             <Footer />
         </div>) ;
     }
