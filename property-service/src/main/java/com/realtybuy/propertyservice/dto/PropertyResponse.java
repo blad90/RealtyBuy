@@ -18,4 +18,5 @@ public class PropertyResponse {
     private String address;
     private int squareFeet;
     private BigDecimal price;
+    private boolean sold;
 }

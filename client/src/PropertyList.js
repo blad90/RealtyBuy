@@ -11,23 +11,17 @@ export default class PropertyList extends React.Component {
 
         this.state = {
             showModal : false,
-            editProperty: null,
-            propertyClicked: false
+            property: {}
         }
     }
 
     handleShow = () => {
         this.setState({ showModal: true });
-        this.setState({propertyClicked: true});
 
         this.setState((prevState) => ({
             showModal: {
                 ...prevState.showModal,
                 showModal: true,
-            },
-            propertyClicked: {
-                ...prevState.propertyClicked,
-                propertyClicked: true,
             },
         }));
     }
@@ -36,14 +30,13 @@ export default class PropertyList extends React.Component {
         this.setState({ showModal: false });
     }
 
-    handleEditItem = (property) => {
-        this.setState({editProperty: property})
+    handleEditItem = (p) => {
+        this.setState({property: p})
     }
 
     render(){
        const {properties, onSelectProperty} = this.props;
-        const filteredProperty = properties.filter(property => property.price > 100)[0];
-        console.log(filteredProperty)
+        const filteredProperty = properties.filter(property => property.price > 100)[1];
 
         return (<div className="container-sm"><table border={1} className="table table-sm table-hover">
             <thead>
@@ -60,7 +53,7 @@ export default class PropertyList extends React.Component {
             {
                 properties.map( property =>
                 <tr key={property.id} onClick={()=>onSelectProperty(property)}>
-                    <td > {property.name} </td>
+                    <td >  {property.name} </td>
                     <td > {property.description } </td>
                     <td > {property.address } </td>
                     <td > {property.squareFeet } </td>
@@ -78,7 +71,10 @@ export default class PropertyList extends React.Component {
                 show={this.state.showModal}
                 handleClose={this.handleClose}
                 editProperty={filteredProperty}
+                    handleEditItem={this.handleEditItem} // Make sure this is correctly passed
             />
+
+
         </div>);
     }
 }

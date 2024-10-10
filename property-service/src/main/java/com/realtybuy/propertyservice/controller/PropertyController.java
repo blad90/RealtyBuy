@@ -17,7 +17,8 @@ public class PropertyController {
 
     private final PropertyService propertyService;
 
-    @PostMapping
+    @PostMapping("add")
+    @RequestMapping(method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public void createProperty(@RequestBody PropertyRequest propertyRequest){
         propertyService.createProperty(propertyRequest);
