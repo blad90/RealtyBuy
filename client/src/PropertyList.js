@@ -11,7 +11,7 @@ export default class PropertyList extends React.Component {
 
         this.state = {
             showModal : false,
-            property: null
+            property: {}
         }
     }
 
@@ -37,7 +37,6 @@ export default class PropertyList extends React.Component {
     render(){
        const {properties, onSelectProperty} = this.props;
         const filteredProperty = properties.filter(property => property.price > 100)[1];
-      //console.log("Filter: "+ filteredProperty)
 
         return (<div className="container-sm"><table border={1} className="table table-sm table-hover">
             <thead>
@@ -72,7 +71,10 @@ export default class PropertyList extends React.Component {
                 show={this.state.showModal}
                 handleClose={this.handleClose}
                 editProperty={filteredProperty}
+                    handleEditItem={this.handleEditItem} // Make sure this is correctly passed
             />
+
+
         </div>);
     }
 }

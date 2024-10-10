@@ -8,7 +8,7 @@ class AddModal extends React.Component {
         super(props);
 
         this.state = {
-            propertyToAdd: null
+            propertyToAdd: {}
         }
     }
     onAddProperty(){
@@ -17,7 +17,7 @@ class AddModal extends React.Component {
         });
     }
 
-render() {
+    render() {
         const {property, onEditProperty} = this.props;
 
         return (
@@ -26,13 +26,16 @@ render() {
                     <Modal.Title>Add Property</Modal.Title>
                 </Modal.Header>
                 <Modal.Body >
-                <PropertyAdd />
+                    <PropertyAdd />
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={this.props.handleClose}>
                         Cerrar
                     </Button>
-                    <Button variant="primary" onClick={()=> this.props.handleAddItem(property)}>
+                    <Button variant="primary" onClick={() => {
+                        const propertyToAdd = this.state.propertyToAdd;
+                        this.props.handleAddItem(propertyToAdd);
+                    }}>
                         Registrar Propiedad
                     </Button>
                 </Modal.Footer>

@@ -44,7 +44,6 @@ export default class PropertyDetail extends React.Component {
 
     render(){
         const {property} = this.props;
-        console.log('PropertyDetail: ' + property.name)
 
         return (<div>
             <form>

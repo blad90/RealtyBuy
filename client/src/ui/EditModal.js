@@ -5,7 +5,6 @@ import PropertyDetail from "../PropertyDetail";
 class EditModal extends React.Component {
     constructor(props) {
         super(props);
-        console.log("EditModal.js : " + props)
 
         this.state = {
             propertyToEdit: this.props.editProperty
@@ -19,10 +18,6 @@ class EditModal extends React.Component {
 
 render() {
         const {property, onEditProperty} = this.props;
-        // console.log("properties: "+JSON.stringify(this.props));
-    console.log('property ' + property)
-    console.log('this.props: ' + JSON.stringify(this.props));
-    console.log('this.props.editProperty: ' + JSON.stringify(this.props.editProperty));
 
         return (
             <Modal show={this.props.show} onHide={this.props.handleClose} >

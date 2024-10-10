@@ -12,7 +12,7 @@ class Header extends React.Component {
 
         this.state = {
             showModal : false,
-            property: null
+            property: {}
         }
     }
 
@@ -75,6 +75,7 @@ class Header extends React.Component {
             <AddModal
                 show={this.state.showModal}
                 handleClose={this.handleClose}
+                handleAddItem={this.handleAddItem}
             />
 
         </div>);
