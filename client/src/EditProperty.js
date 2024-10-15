@@ -9,6 +9,7 @@ export default class EditProperty extends React.Component {
         
         return (<div>
             <form>
+                <div>Esto es EditProperty.js</div>
                 <div className="mb-3">
                     <label htmlFor="propertyId" className="form-label">Property ID</label>
                     <input type="text" className="form-control" id="propertyId" aria-describedby="propertyInfo"/>

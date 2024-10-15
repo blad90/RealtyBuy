@@ -3,28 +3,121 @@ import axios from 'axios';
 
 export default class PropertyDetail extends React.Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            property: this.props.property,
+            id: this.props.id,
+            name: this.props.property.name,
+            description: this.props.property.description,
+            address: this.props.property.address,
+            squareFeet: this.props.property.squareFeet,
+            price: this.props.property.price,
+            sold: this.props.property.status,
+        }
+    }
+
+        updatePropertyName(event){
+            this.setState({ name: event.target.value });
+        }
+
+        updatePropertyDesc(event){
+            this.setState({ description: event.target.value });
+        }
+
+        updatePropertyAddress(event){
+            this.setState({ address: event.target.value });
+        }
+
+    updatePropertySquareFeet(event){
+        this.setState({ squareFeet: event.target.value });
+    }
+
+    updatePropertyPrice(event){
+        this.setState({ price: event.target.value });
+    }
+
+    updatePropertySold(event){
+        this.setState({ sold: event.target.value });
+    }
 
     render(){
         const {property} = this.props;
-        
-        return (<div>
-            <div className="card w-25 m-5" >
-                <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" className="card-img-top" alt="..."/>
-                <div className="card-body">
-                    <h5 className="card-title">{property.name}</h5>
-                    <p className="card-text">{property.description}</p>
-                </div>
-                <ul className="list-group list-group-flush">
-                    <li className="list-group-item">{property.address}</li>
-                    <li className="list-group-item">{property.squareFeet}</li>
-                    <li className="list-group-item">${property.price}</li>
-                </ul>
-                <div className="card-body">
-                    <a href="#" className="card-link">Purchase</a>
-                    <a href="#" className="card-link">Contact Seller</a>
-                </div>
-            </div>
 
+        return (<div>
+            <form>
+                <div className="mb-3">
+                    <label htmlFor="propertyId" className="form-label">Property ID</label>
+                    <input type="text" className="form-control" id="propertyId"
+                           aria-describedby="propertyInfo" readOnly={true} value={this.state.property.id}/>
+                    <div id="propertyInfo" className="form-text">For property identification.</div>
+                </div>
+
+                <div className="mb-3">
+                    <label htmlFor="propertyName" className="form-label">nombre</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="propertyName"
+                        value={this.state.name}
+                        onChange={(event) =>
+                            this.updatePropertyName(event)}/>
+                </div>
+
+                <div className="mb-3">
+                    <label htmlFor="propertyDescription" className="form-label">Description</label>
+                    <input type="text" className="form-control" id="propertyDescription"
+                           value={this.state.description}
+                           onChange={(event) =>
+                               this.updatePropertyDesc(event)}
+                    />
+                </div>
+
+                <div className="mb-3">
+                    <label htmlFor="propertyAddress" className="form-label">Address</label>
+                    <input type="address" className="form-control" id="propertyAddress"
+                           value={this.state.address}
+                           onChange={(event) =>
+                               this.updatePropertyAddress(event)}
+                    />
+                </div>
+
+                <div className="mb-3">
+                    <label htmlFor="propertySq" className="form-label">Sq.</label>
+                    <input type="text" className="form-control" id="propertySq"
+                           value={this.state.squareFeet}
+                           onChange={(event) =>
+                               this.updatePropertySquareFeet(event)}
+                    />
+                </div>
+
+                <div className="mb-3">
+                    <label htmlFor="propertyPrice" className="form-label">Price</label>
+                    <input type="text" className="form-control" id="propertyPrice"
+                           value={this.state.price}
+                           onChange={(event) =>
+                               this.updatePropertyPrice(event)}
+                    />
+                </div>
+
+                <select className="form-control" id="status" value={this.state.sold}
+                        onChange={(event) =>
+                            this.updatePropertySold(event)}
+                >
+                    <option value="false">AVAILABLE</option>
+                    <option value="true">SOLD</option>
+                </select>
+
+                {/*<div className="mb-3">*/}
+                {/*    <label htmlFor="propertySold" className="form-label">Status</label>*/}
+                {/*    <input type="text" className="form-control" id="propertySold"*/}
+                {/*           value={this.state.status}*/}
+                {/*           onChange={(event) =>*/}
+                {/*               this.updatePropertyStatus(event)}*/}
+                {/*    />*/}
+                {/*</div>*/}
+            </form>
         </div>);
     }
 }

@@ -2,11 +2,44 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import style from './style.css';
+import EditModal from "./EditModal";
+import AddModal from "./AddModal";
 
 class Header extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            showModal : false,
+            property: { id: "x" }
+        }
+    }
+
+    handleShow = () => {
+        this.setState({ showModal: true });
+
+        this.setState((prevState) => ({
+            showModal: {
+                ...prevState.handleShow,
+                showModal: true,
+            },
+        }));
+    }
+
+    handleAddItem = (p) => {
+        alert("agregado exitosamente " + this.p);
+        this.setState({property: p})
+
+    }
+
+    handleClose = () => {
+        this.setState({ showModal: false });
+    }
+
     render (){
         return (<div>
-            <div className="bg-realtybuy"  >
+            <div className="bg-realtybuy">
                 ...
 
             </div>
@@ -24,6 +57,9 @@ class Header extends React.Component {
                         <li className="nav-item active">
                             <a className="nav-link" href="#">Home</a>
                         </li>
+                        <li className="nav-item active">
+                            <a className="nav-link" href="#" onClick={this.handleShow}>Add Property</a>
+                        </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">Properties</a>
                         </li>
@@ -36,6 +72,14 @@ class Header extends React.Component {
                     </form>
                 </div>
             </nav>
+
+            <AddModal
+                show={this.state.showModal}
+                property={{id: ""}}
+                handleClose={this.handleClose}
+                handleAddItem={this.handleAddItem}
+            />
+
         </div>);
     }
 }
