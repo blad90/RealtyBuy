@@ -4,9 +4,25 @@ export default class PropertyAdd extends React.Component {
 
     constructor(props) {
         super(props);
-
-        this.state ={};
+        this.state ={ property : null };
     }
+
+    addProperty(obj ){
+        this.setState( { property: obj  });
+    }
+
+    onSaveProperty(formData){
+        let property = {
+            // id :  form.id.value,
+            // name: form.name.value
+        }
+
+        const propertyId = formData.get("propertyId");
+        const propertyName = formData.get("propertyName");
+        alert(propertyId);
+    }
+
+
 
     render() {
         return (
@@ -15,7 +31,7 @@ export default class PropertyAdd extends React.Component {
                 <div className="mb-3">
                     <label htmlFor="propertyId" className="form-label">Property ID</label>
                     <input type="text" className="form-control" id="propertyId"
-                           aria-describedby="propertyInfo" readOnly={true} value="1"/>
+                           aria-describedby="propertyInfo" name="propertyId" readOnly={true} value="1"/>
                     <div id="propertyInfo" className="form-text">For property identification.</div>
                 </div>
 

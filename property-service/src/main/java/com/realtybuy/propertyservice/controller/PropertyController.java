@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/property")
 @RequiredArgsConstructor
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:3000")
 public class PropertyController {
 
     private final PropertyService propertyService;

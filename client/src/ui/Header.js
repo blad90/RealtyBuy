@@ -12,7 +12,7 @@ class Header extends React.Component {
 
         this.state = {
             showModal : false,
-            property: {}
+            property: { id: "x" }
         }
     }
 
@@ -28,8 +28,9 @@ class Header extends React.Component {
     }
 
     handleAddItem = (p) => {
-        alert("agregado exitosamente");
+        alert("agregado exitosamente " + this.p);
         this.setState({property: p})
+
     }
 
     handleClose = () => {
@@ -74,6 +75,7 @@ class Header extends React.Component {
 
             <AddModal
                 show={this.state.showModal}
+                property={{id: ""}}
                 handleClose={this.handleClose}
                 handleAddItem={this.handleAddItem}
             />
